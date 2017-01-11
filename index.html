@@ -4,9 +4,13 @@
     <title>Angular QuickStart</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="styles.css">
 
     <!-- Polyfill(s) for older browsers -->
+    
     <script src="node_modules/core-js/client/shim.min.js"></script>
 
     <script src="node_modules/zone.js/dist/zone.js"></script>
@@ -16,9 +20,63 @@
     <script>
       System.import('app').catch(function(err){ console.error(err); });
     </script>
+
+    <!-- jquery ja osalin ylevaade web apist, lisatud yles kesise koodi disaini t6ttu-->
+    <!-- <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+         <script src="webapi.js"></script>-->
   </head>
 
   <body>
     <my-app>Loading AppComponent content here ...</my-app>
+    
+    <!--Siit algab mitte angulariga seotud
+        modulaarsed lahendused, koodi mustrid, jquery ja api-->
+    <aside>
+      <!--
+      <section id="moodulLoomad" class="flex panel panel-default">
+          <h1>Loomad</h1>
+          <section>
+            <input type="text" id="sisend" class="space" autofocus tabindex="1" />
+            <button id="nupp" class="btn btn-primary space">Lisa loom</button>
+          </section>
+          <ul id="nimekiri">
+            <script id="loomadeMuster" type="text/template">
+              {{#loomad}}
+                <li class="space">
+                  <button class="del btn btn-default">{{.}}</button>
+                </li>
+              {{/loomad}}
+            </script>
+          </ul>
+      </section>
+      <section id="moodulStatistika" class="flex panel panel-default">
+        <script id="statistikaMuster" type="text/template">
+          <h2>Statistika</h2>
+          <strong>Loomad: {{statistika}}</strong>
+        </script>
+      </section>
+      <form action="">
+        <select name="tekstid" id="tekstiValija" onchange="n2itaTekst(this.options[this.selectedIndex].value)">
+          <option default value="">Vali tekst</option>
+          <option value="tekst1">I tekst</option>
+          <option value="tekst2">II tekst</option>
+        </select>
+      </form>
+      <section id="minuTekstid">Siia tulevad ajax tekstid</section>
+      
+      <div id="pildiga" ondrop="aseta(event)" ondragover="lubaAsetada(event)">
+          <img src="logo.png" draggable="true" 
+            ondragstart="t6mba(event)" id="t6mmatav"/>
+      </div>
+      <div id="pildita" ondrop="aseta(event)" ondragover="lubaAsetada(event)"></div>
+      <script src="node_modules/mustache/mustache.min.js"></script>
+      <script src="syndmused.js"></script>
+      <script src="statistika.js"></script>-->
+      <!--<script src="loomad.js"></script>-->
+      <!--<script src="loomadAlt.js"></script>
+      <script src="classical.js"></script>
+      <script src="prototypal.js"></script>
+      -->
+    </aside>
   </body>
 </html>
